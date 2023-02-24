@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField]
@@ -23,6 +25,14 @@ public class PlayerManager : MonoBehaviour
     }
     void Update()
     {
-        
+        CheckInventory();
     }
+    private void CheckInventory()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventory.OpenCloseInventory(Inventory.change.Change);
+        }
+    }
+
 }
