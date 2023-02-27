@@ -11,7 +11,6 @@ public class PlayerManager : MonoBehaviour
     private Inventory inventory;
     private Rigidbody2D rb;
 
-
     private Vector2 moveInput;
     void Start()
     {
@@ -35,4 +34,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+
+   
 }

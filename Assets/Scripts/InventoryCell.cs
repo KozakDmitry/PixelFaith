@@ -9,22 +9,17 @@ public class InventoryCell
 {
     private int number;
     private GameObject item;
-    private bool stackable = false;
-    private int count;
+    
 
-    public void setGameObj(int num,GameObject go, bool stackable, int count = 1)
+    public InventoryCell(int num)
     {
-        this.number = num;
-        this.stackable = stackable;
+        number = num;
+        item = null;
+    }
+    public void setGameObj(int num,GameObject go = null)
+    {
+        number = num;
         item = go;
-        if (!stackable)
-        {
-            this.count = 1;
-        }
-        else
-        {
-            this.count = count;
-        }
     }
 
     public GameObject getObject()

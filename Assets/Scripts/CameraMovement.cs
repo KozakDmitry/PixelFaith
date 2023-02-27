@@ -9,6 +9,10 @@ namespace SVS
     {
         public Camera gameCamera;
  
+        private void SetCamera()
+        {
+
+        }
 
         private void Start()
         {

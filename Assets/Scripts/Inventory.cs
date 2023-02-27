@@ -22,10 +22,11 @@ public class Inventory :MonoBehaviour
     private void Start()
     {
         inventoryCapacity = new InventoryCell[15];
+        
         for(int i = 0; i < countOfCells; i++)
         {
             Instantiate(inventoryCell, inventoryScreen.transform);
-            inventoryCapacity[i].setGameObj(i, inventoryCell, false);
+            inventoryCapacity[i] = new InventoryCell(i);
         }
     }
     public InventoryCell giveCell(int num)
@@ -42,8 +43,10 @@ public class Inventory :MonoBehaviour
             case change.False:
                 inventoryScreen.SetActive(false);
                 break;
+            case change.Change:
+                inventoryScreen.SetActive(!inventoryScreen.activeInHierarchy);
+                break;
             default:
-                inventoryScreen.SetActive(!inventoryScreen);
                 break;
         }
 
