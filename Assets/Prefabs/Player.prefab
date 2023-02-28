@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 886336744}
   - component: {fileID: 3647348507979397112}
   - component: {fileID: 886336740}
+  - component: {fileID: -989337195160822372}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -136,3 +137,17 @@ MonoBehaviour:
   countOfCells: 5
   inventoryCell: {fileID: 473777715254397461, guid: f662e1957092bbc4ba18685539253933, type: 3}
   inventoryScreen: {fileID: 0}
+--- !u!114 &-989337195160822372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647348507979397113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5af47033d1d2e84e88fd980ab187ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuAdvices: {fileID: 0}
+  adviceM: {fileID: 0}
