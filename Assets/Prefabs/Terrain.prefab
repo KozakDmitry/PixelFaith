@@ -445,9 +445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 4425708184204006043}
   doors:
-  - {fileID: 6864373555334918070}
-  - {fileID: 4201986148534774218}
   - {fileID: 8229402596679127896}
+  - {fileID: 4201986148534774218}
+  - {fileID: 6864373555334918070}
   - {fileID: 6395465475315456727}
 --- !u!1 &2470102196862165593
 GameObject:
