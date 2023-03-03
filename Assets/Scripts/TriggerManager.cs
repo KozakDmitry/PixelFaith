@@ -5,11 +5,13 @@ using UnityEngine;
 public class TriggerManager : MonoBehaviour
 {
     private ICollectable iC;
+    private RoomManager rm;
     [SerializeField]
     private Transform menuAdvices;
     [SerializeField]
     private AdviceManager adviceM;
-
+    [SerializeField]
+    private Transform playerCameraPosition;
 
     void Start()
     {
@@ -34,9 +36,13 @@ public class TriggerManager : MonoBehaviour
         {
             adviceM.DisableAll();
         }
+        
     }
 
-
+    public void ChangeCameraPosition(Transform cameraPosition)
+    {
+        playerCameraPosition = cameraPosition;
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(iC == collision.gameObject.GetComponent<ICollectable>())

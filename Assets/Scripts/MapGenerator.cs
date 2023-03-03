@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
@@ -9,6 +10,7 @@ public class MapGenerator : MonoBehaviour
     private GameObject standartRoom;
     [SerializeField]
     private ScriptableObject mapStats;
+    private Vector3 startPosition = new Vector3(0, 0, 0);
     private enum pointsOfRoom
         {
             left = 0,
@@ -25,7 +27,7 @@ public class MapGenerator : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            sides[i] = Random.Range(0, 4);
+            Instantiate(standartRoom);
         }
 
     }
