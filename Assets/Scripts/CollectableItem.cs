@@ -6,6 +6,7 @@ public class CollectableItem : MonoBehaviour,ICollectable
 {
     public bool Collect()
     {
+        Destroy(this.gameObject);
         return true;
     }
     public AdviceTypes InInteract()
