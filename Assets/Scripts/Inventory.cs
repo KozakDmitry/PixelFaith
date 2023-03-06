@@ -19,6 +19,7 @@ public class Inventory :MonoBehaviour
         Change,
         False,
     }
+    
     private void Start()
     {
         inventoryCapacity = new InventoryCell[15];

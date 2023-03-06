@@ -9,7 +9,6 @@ public class InventoryCell
 {
     private int number;
     private GameObject item;
-    
 
     public InventoryCell(int num)
     {
