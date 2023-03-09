@@ -15,9 +15,8 @@ public class InventoryCell
         number = num;
         item = null;
     }
-    public void setGameObj(int num,GameObject go = null)
+    public void setGameObj(GameObject go = null)
     {
-        number = num;
         item = go;
     }
 

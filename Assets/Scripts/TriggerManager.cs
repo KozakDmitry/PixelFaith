@@ -12,10 +12,12 @@ public class TriggerManager : MonoBehaviour
     private AdviceManager adviceM;
     [SerializeField]
     private Transform playerCameraPosition;
-
+    [SerializeField]
+    private Inventory inventory;
+    private GameObject collectItem;
     void Start()
     {
-
+        inventory = GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,8 +28,16 @@ public class TriggerManager : MonoBehaviour
             adviceM.SetActive(iC.InInteract(), true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                iC.Collect();
-                adviceM.SetActive(iC.InInteract(), false);
+                if (inventory.IsHasFreeCells())
+                {
+                    collectItem = iC.Collect();
+                    inventory.setCell(collectItem);
+                    adviceM.SetActive(iC.InInteract(), false);
+                }
+                else
+                {
+
+                }
 
             }
 

@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum type {Card, Usable }
+public enum typeOfCard {Warrior, Samurai, Archer, Mage}
 [Serializable]
 public class Inventory :MonoBehaviour
 {
@@ -13,13 +16,17 @@ public class Inventory :MonoBehaviour
     private GameObject inventoryCell;
     [SerializeField]
     private GameObject inventoryScreen;
+    private bool freeCells = true;
     public enum change
     {
         True,
         Change,
         False,
     }
-    
+    public bool IsHasFreeCells()
+    {
+        return freeCells;
+    }
     private void Start()
     {
         inventoryCapacity = new InventoryCell[15];
@@ -28,6 +35,21 @@ public class Inventory :MonoBehaviour
         {
             Instantiate(inventoryCell, inventoryScreen.transform);
             inventoryCapacity[i] = new InventoryCell(i);
+        }
+    }
+    public void setCell(GameObject gameobj)
+    {
+        for(int i = 0; i < countOfCells; i++)
+        {
+            if (inventoryCapacity[i].getObject())
+            {
+                inventoryCapacity[i].setGameObj(gameobj);
+                break;
+            }
+            if (i == countOfCells - 1)
+            {
+                freeCells = false;
+            }
         }
     }
     public InventoryCell giveCell(int num)

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public interface ICollectable 
 {
-    bool Collect();
+    public type GetObjectType();
+    GameObject Collect();
     AdviceTypes InInteract();
     void OutInteract();
 }
