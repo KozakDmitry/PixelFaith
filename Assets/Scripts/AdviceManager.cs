@@ -9,13 +9,13 @@ public class AdviceManager : MonoBehaviour
     [SerializeField]
     private GameObject adviceUsial;
     [SerializeField]
-    private GameObject adviceWindow;
+    private GameObject adviceInteract;
 
 
     public void DisableAll()
     {
         adviceUsial.SetActive(false);
-        adviceWindow.SetActive(false);
+        adviceInteract.SetActive(false);
     }
     public void SetActive(AdviceTypes type, bool state)
     {
@@ -25,7 +25,7 @@ public class AdviceManager : MonoBehaviour
                 adviceUsial.SetActive(state);
                 break;
             case AdviceTypes.Window:
-                adviceWindow.SetActive(state);
+                adviceInteract.SetActive(state);
                 break;
         }
     }

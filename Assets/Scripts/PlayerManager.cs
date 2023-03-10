@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,14 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed = 5f;
+    private TriggerManager triggerManager;
     private Inventory inventory;
     private Rigidbody2D rb;
 
     private Vector2 moveInput;
     void Start()
     {
+        triggerManager = GetComponent<TriggerManager>();
         inventory = GetComponent<Inventory>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -25,13 +28,24 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         CheckInventory();
+        CheckInteraction();
     }
+
+    private void CheckInteraction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            triggerManager.CheckInteract();
+        }
+    }
+
     private void CheckInventory()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventory.OpenCloseInventory(Inventory.change.Change);
         }
+
     }
 
 

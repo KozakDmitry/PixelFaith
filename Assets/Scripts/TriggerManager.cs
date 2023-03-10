@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,12 @@ using UnityEngine;
 public class TriggerManager : MonoBehaviour
 {
     private ICollectable iC;
+    private bool Interacting=false;
     private RoomManager rm;
-    [SerializeField]
-    private Transform menuAdvices;
     [SerializeField]
     private AdviceManager adviceM;
     [SerializeField]
     private Transform playerCameraPosition;
-    [SerializeField]
     private Inventory inventory;
     private GameObject collectItem;
     void Start()
@@ -26,20 +25,7 @@ public class TriggerManager : MonoBehaviour
         if (iC != null)
         {
             adviceM.SetActive(iC.InInteract(), true);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (inventory.IsHasFreeCells())
-                {
-                    collectItem = iC.Collect();
-                    inventory.setCell(collectItem);
-                    adviceM.SetActive(iC.InInteract(), false);
-                }
-                else
-                {
-
-                }
-
-            }
+            Interacting = true;
 
         }
         else
@@ -57,7 +43,27 @@ public class TriggerManager : MonoBehaviour
     {
         if(iC == collision.gameObject.GetComponent<ICollectable>())
         {
+            Interacting = false;
+            iC = null;
             adviceM.DisableAll();
+        }
+    }
+
+    internal void CheckInteract()
+    {
+        if (Interacting)
+        {
+            if (inventory.IsHasFreeCells())
+            {
+                collectItem = iC.Collect();
+                inventory.setCell(collectItem);
+                adviceM.SetActive(iC.InInteract(), false);
+            }
+            else
+            {
+
+            }
+
         }
     }
 }
