@@ -63,6 +63,7 @@ public class Inventory :MonoBehaviour
             {
                 if (!inventoryCapacity[i].getObject())
                 {
+                    
                     inventoryCapacity[i].setGameObj(gameobj);
                     return true;
                 }
