@@ -53,15 +53,13 @@ public class TriggerManager : MonoBehaviour
     {
         if (Interacting)
         {
-            if (inventory.IsHasFreeCells())
+            if (inventory.setCell(iC.Collect()))
             {
-                collectItem = iC.Collect();
-                inventory.setCell(collectItem);
                 adviceM.SetActive(iC.InInteract(), false);
             }
             else
             {
-
+                adviceM.NotEnoughSpace();
             }
 
         }

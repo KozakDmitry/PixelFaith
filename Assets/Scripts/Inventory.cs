@@ -17,14 +17,32 @@ public class Inventory :MonoBehaviour
     [SerializeField]
     private GameObject inventoryScreen;
     private bool freeCells = true;
+    private int checkedCells;
     public enum change
     {
         True,
         Change,
         False,
     }
-    public bool IsHasFreeCells()
+    private bool IsHasFreeCells()
     {
+        for (int i = 0; i < countOfCells; i++)
+        {
+            checkedCells = 0;
+            if (!inventoryCapacity[i].getObject())
+            {
+                freeCells = true;
+                break;
+            }
+            else
+            {
+                checkedCells++;
+            }
+            if (checkedCells == countOfCells - 1)
+            {
+                freeCells = false;
+            }
+        }
         return freeCells;
     }
     private void Start()
@@ -37,21 +55,28 @@ public class Inventory :MonoBehaviour
             inventoryCapacity[i] = new InventoryCell(i);
         }
     }
-    public void setCell(GameObject gameobj)
+    public bool setCell(GameObject gameobj)
     {
-        for(int i = 0; i < countOfCells; i++)
+        if (IsHasFreeCells())
         {
-            if (inventoryCapacity[i].getObject())
+            for (int i = 0; i < countOfCells; i++)
             {
-                inventoryCapacity[i].setGameObj(gameobj);
-                break;
+                if (!inventoryCapacity[i].getObject())
+                {
+                    inventoryCapacity[i].setGameObj(gameobj);
+                    return true;
+                }
+
             }
-            if (i == countOfCells - 1)
-            {
-                freeCells = false;
-            }
+            return false;
+        }
+        else
+        {
+            return false;
         }
     }
+    
+   
     public InventoryCell giveCell(int num)
     {
         return inventoryCapacity[num];

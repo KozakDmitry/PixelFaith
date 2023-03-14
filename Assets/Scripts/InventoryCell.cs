@@ -9,15 +9,27 @@ public class InventoryCell
 {
     private int number;
     private GameObject item;
-    
+    [SerializeField]
+    private ScriptableObject cardData;
     public InventoryCell(int num)
     {
         number = num;
         item = null;
     }
+
     public void setGameObj(GameObject go = null)
     {
-        item = go;
+        if (go != null)
+        {
+            if (go.GetComponent<Card>().GetObjectType() == type.Card)
+            {
+                cardData = go.GetComponent<Card>().GetCardData();
+            }
+        }
+        else 
+        {
+            item = go;
+        }
     }
 
     public GameObject getObject()
