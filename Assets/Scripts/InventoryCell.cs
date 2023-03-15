@@ -8,6 +8,7 @@ using UnityEngine;
 public class InventoryCell 
 {
     private int number;
+    private GameObject cell;
     private GameObject item;
     [SerializeField]
     private ScriptableObject cardData;
@@ -17,7 +18,7 @@ public class InventoryCell
         item = null;
     }
 
-    public void setGameObj(GameObject go = null)
+    public void setGameObj(GameObject cell, GameObject go = null)
     {
         if (go != null)
         {
@@ -30,6 +31,7 @@ public class InventoryCell
         {
             item = go;
         }
+        this.cell = cell;
     }
 
     public GameObject getObject()
