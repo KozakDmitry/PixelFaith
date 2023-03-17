@@ -7,12 +7,12 @@ public class Card : MonoBehaviour,ICollectable
     [SerializeField]
     private type type;
     [SerializeField]
-    private ScriptableObject cardData;
+    private CardData cardData;
     public type GetObjectType()
     {
         return type;
     }
-    public ScriptableObject GetCardData()
+    public CardData GetCardData()
     {
         return cardData;
     }

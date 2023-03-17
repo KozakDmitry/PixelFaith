@@ -11,8 +11,6 @@ public enum typeOfCard {Warrior, Samurai, Archer, Mage}
 public class Inventory :MonoBehaviour
 {
     private GameObject test;
-    private (InventoryCell, GameObject) gm;
-    private Dictionary<int, (InventoryCell,GameObject)> inventory;
     private InventoryCell[] inventoryCapacity; 
     [SerializeField]
     private int countOfCells = 5;
@@ -51,19 +49,14 @@ public class Inventory :MonoBehaviour
     }
     private void Start()
     {
-        inventory = new Dictionary<int, (InventoryCell, GameObject)>();
+
+        inventoryCapacity = new InventoryCell[15];
+
         for (int i = 0; i < countOfCells; i++)
         {
-            inventory.Add(i, (new InventoryCell(i), Instantiate(inventoryCell, inventoryScreen.transform)));
+            ;
+            inventoryCapacity[i] = new InventoryCell(i, Instantiate(inventoryCell, inventoryScreen.transform));
         }
-
-        //inventoryCapacity = new InventoryCell[15];
-
-        //for (int i = 0; i < countOfCells; i++)
-        //{
-        //    Instantiate(inventoryCell, inventoryScreen.transform);
-        //    inventoryCapacity[i] = new InventoryCell(i);
-        //}
     }
     public bool setCell(GameObject gameobj)
     {

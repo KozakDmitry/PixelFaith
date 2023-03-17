@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
 public class InventoryCell 
@@ -11,29 +12,46 @@ public class InventoryCell
     private GameObject cell;
     private GameObject item;
     [SerializeField]
-    private ScriptableObject cardData;
-    public InventoryCell(int num)
-    {
-        number = num;
-        item = null;
-    }
-
-    public void setGameObj(GameObject cell, GameObject go = null)
+    private CardData cardData;
+    public InventoryCell(int num, GameObject cell, GameObject go = null)
     {
         if (go != null)
         {
             if (go.GetComponent<Card>().GetObjectType() == type.Card)
             {
                 cardData = go.GetComponent<Card>().GetCardData();
+                ChangeImage(cardData.Icon);
             }
         }
-        else 
+        else
         {
             item = go;
         }
+        number = num;
+        item = null;
         this.cell = cell;
+
     }
 
+    public void setGameObj(GameObject go)
+    {
+      
+        if (go.GetComponent<Card>().GetObjectType() == type.Card)
+        {
+            cardData = go.GetComponent<Card>().GetCardData();
+            ChangeImage(cardData.Icon);
+        }
+       
+                
+       
+     
+        
+    }
+
+    public void ChangeImage(Sprite image) 
+    {
+        cell.GetComponentsInChildren<Image>()[1].sprite = image;
+    }
     public GameObject getObject()
     {
         return item;
