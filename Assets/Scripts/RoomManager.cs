@@ -7,8 +7,7 @@ public class RoomManager : MonoBehaviour
 
     [SerializeField]
     private Transform cameraPosition;
-    [SerializeField]
-    private Door[] doors;
+    public GameObject[] doors;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,10 +17,7 @@ public class RoomManager : MonoBehaviour
             collision.gameObject.gameObject.GetComponent<TriggerManager>().ChangeCameraPosition(cameraPosition);         
         }
     }
-    private void Awake()
-    {
-        
-    }
+    
     public void ChangeRoom(int numberOfRoom)
     {
 
