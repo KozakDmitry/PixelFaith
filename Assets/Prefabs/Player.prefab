@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 681829086079683131}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5af47033d1d2e84e88fd980ab187ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuAdvices: {fileID: 0}
   adviceM: {fileID: 0}
+  playerCameraPosition: {fileID: 0}
 --- !u!61 &681829086079683131
 BoxCollider2D:
   m_ObjectHideFlags: 0

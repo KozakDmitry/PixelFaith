@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
-  - {fileID: 2469162906176301437}
-  standartRoom: {fileID: 4293109357297727309, guid: c513a54029d589443987624e65f446a7, type: 3}
+  - {fileID: 4293109357297727309, guid: c513a54029d589443987624e65f446a7, type: 3}
+  standartRoom: {fileID: 2469162906176301437}
   mapStats: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1179,6 +1179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 3472485256671381633, guid: c513a54029d589443987624e65f446a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4293109357297727309, guid: c513a54029d589443987624e65f446a7, type: 3}
       propertyPath: doors.Array.data[0]
       value: 
@@ -1195,39 +1199,20 @@ PrefabInstance:
       propertyPath: doors.Array.data[3]
       value: 
       objectReference: {fileID: 2469162906176301433}
+    - target: {fileID: 5100304247991129339, guid: c513a54029d589443987624e65f446a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390329962143675285, guid: c513a54029d589443987624e65f446a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8346150070790857805, guid: c513a54029d589443987624e65f446a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c513a54029d589443987624e65f446a7, type: 3}
---- !u!1 &2469162906176301431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2469162906839379471, guid: c513a54029d589443987624e65f446a7, type: 3}
-  m_PrefabInstance: {fileID: 2469162906176301430}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &2469162906176301432
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469162906176301431}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2469162906176301433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8346150070790857805, guid: c513a54029d589443987624e65f446a7, type: 3}
@@ -1253,7 +1238,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4293109357297727309, guid: c513a54029d589443987624e65f446a7, type: 3}
   m_PrefabInstance: {fileID: 2469162906176301430}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469162906176301431}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3da8ff6a8a744f14f9899f1b65323a36, type: 3}

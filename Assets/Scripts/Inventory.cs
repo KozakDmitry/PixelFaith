@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-//DICTIONARY or inside CELL
 public enum type {Card, Usable }
 public enum typeOfCard {Warrior, Samurai, Archer, Mage}
 [Serializable]
