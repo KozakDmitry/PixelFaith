@@ -1256,6 +1256,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2123681985}
     - target: {fileID: -989337195160822372, guid: 1c9315e4f06fa4541af5bd5ac01c2d3d, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: -989337195160822372, guid: 1c9315e4f06fa4541af5bd5ac01c2d3d, type: 3}
       propertyPath: playerCameraPosition
       value: 
       objectReference: {fileID: 519420032}
@@ -1289,7 +1293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3647348507979397114, guid: 1c9315e4f06fa4541af5bd5ac01c2d3d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3647348507979397114, guid: 1c9315e4f06fa4541af5bd5ac01c2d3d, type: 3}
       propertyPath: m_LocalRotation.w

@@ -15,8 +15,7 @@ public class RoomManager : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-            Debug.Log("Obosralsya");
-            collision.gameObject.gameObject.GetComponent<TriggerManager>().ChangeCameraPosition(cameraPosition);         
+            collision.gameObject.GetComponent<TriggerManager>().ChangeCameraPosition(cameraPosition);         
         }
     }
     

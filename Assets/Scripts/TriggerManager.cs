@@ -11,7 +11,7 @@ public class TriggerManager : MonoBehaviour
     [SerializeField]
     private AdviceManager adviceM;
     [SerializeField]
-    private Transform playerCameraPosition;
+    private GameObject playerCamera;
     private Inventory inventory;
     private GameObject collectItem;
     void Start()
@@ -37,7 +37,7 @@ public class TriggerManager : MonoBehaviour
 
     public void ChangeCameraPosition(Transform cameraPosition)
     {
-        playerCameraPosition = cameraPosition;
+        playerCamera.transform.position = cameraPosition.position;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
