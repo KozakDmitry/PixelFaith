@@ -31,7 +31,6 @@ public class MapGenerator : MonoBehaviour
         for(int i = 0; i < mapOfRooms.GetLength(0); i++)
         {
             GenerateRoom();
-            //yield return new WaitForSeconds(0.5f);
         }
     }
     private void GenerateRoom()
