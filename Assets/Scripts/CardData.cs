@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New CardData", menuName = "Cards", order = 51)]
 public class CardData : ScriptableObject
 {
+   
     [SerializeField]
     private typeOfCard type;
     [SerializeField]
