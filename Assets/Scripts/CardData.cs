@@ -12,7 +12,7 @@ public class CardData : ScriptableObject
     [SerializeField]
     private Sprite icon;
     [SerializeField]
-    private Card[] cards;
+    private CardItem[] cards;
 
     public typeOfCard Type
     {
@@ -29,7 +29,7 @@ public class CardData : ScriptableObject
         }
     }
 
-    public Card[] Cards
+    public CardItem[] Cards
     {
         get
         {

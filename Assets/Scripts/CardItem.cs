@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour,ICollectable
+public class CardItem : MonoBehaviour,ICollectable
 {
     public int id;
     [SerializeField]
@@ -11,13 +11,13 @@ public class Card : MonoBehaviour,ICollectable
     private int attackDamage;
     [SerializeField]
     private int defense;
-    private List<Card> subCards;
+    private List<CardItem> subCards;
     [SerializeField]
     private type type;
     [SerializeField]
     private CardData cardData;
 
-    public Card(int id, int hp, int attackDamage, int defense, List<Card> subCards)
+    public CardItem(int id, int hp, int attackDamage, int defense, List<CardItem> subCards)
     {
         this.id = id;
         this.hp = hp;
@@ -40,7 +40,7 @@ public class Card : MonoBehaviour,ICollectable
         return defense;
     }
 
-    public List<Card> GetSubCards()
+    public List<CardItem> GetSubCards()
     {
         return subCards;
     }

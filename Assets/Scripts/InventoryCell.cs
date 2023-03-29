@@ -17,9 +17,9 @@ public class InventoryCell
     {
         if (go != null)
         {
-            if (go.GetComponent<Card>().GetObjectType() == type.Card)
+            if (go.GetComponent<CardItem>().GetObjectType() == type.Card)
             {
-                cardData = go.GetComponent<Card>().GetCardData();
+                cardData = go.GetComponent<CardItem>().GetCardData();
                 ChangeImage(cardData.Icon);
             }
         }
@@ -36,9 +36,9 @@ public class InventoryCell
     public void setGameObj(GameObject go)
     {
       
-        if (go.GetComponent<Card>().GetObjectType() == type.Card)
+        if (go.GetComponent<CardItem>().GetObjectType() == type.Card)
         {
-            cardData = go.GetComponent<Card>().GetCardData();
+            cardData = go.GetComponent<CardItem>().GetCardData();
             ChangeImage(cardData.Icon);
         }
        
