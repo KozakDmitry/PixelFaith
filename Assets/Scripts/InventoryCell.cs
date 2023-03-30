@@ -8,6 +8,7 @@ using UnityEngine.UI;
 [Serializable]
 public class InventoryCell 
 {
+    private type type;
     private int number;
     private GameObject cell;
     private GameObject item;
@@ -19,6 +20,7 @@ public class InventoryCell
         {
             if (go.GetComponent<CardItem>().GetObjectType() == type.Card)
             {
+                type = type.Card;
                 cardData = go.GetComponent<CardItem>().GetCardData();
                 ChangeImage(cardData.Icon);
             }
@@ -32,7 +34,10 @@ public class InventoryCell
         this.cell = cell;
 
     }
-
+    public type GetCellType()
+    {
+        return type;
+    }
     public void setGameObj(GameObject go)
     {
       

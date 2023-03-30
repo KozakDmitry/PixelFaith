@@ -19,6 +19,9 @@ public class Inventory :MonoBehaviour
     private GameObject inventoryScreen;
     private bool freeCells = true;
     private int checkedCells;
+
+
+    private List<InventoryCell> checkList;
     public enum change
     {
         True,
@@ -105,5 +108,18 @@ public class Inventory :MonoBehaviour
     private void Save()
     {
 
+    }
+
+    public List<InventoryCell> GetNeededObjects(type type)
+    {
+        checkList = new List<InventoryCell>();
+        for(int i = 0; i < countOfCells; i++)
+        {
+            if (inventoryCapacity[i].GetCellType() == type)
+            {
+                checkList.Add(inventoryCapacity[i]);
+            }
+        }
+        return checkList;
     }
 }
