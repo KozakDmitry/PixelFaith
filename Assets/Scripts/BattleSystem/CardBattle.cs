@@ -1,15 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class CardBattle 
 {
-    [SerializeField]
     private int hp;
-    [SerializeField]
     private int attackDamage;
-    [SerializeField]
+    
     private int defense;
+    
     private List<CardItem> subCards;
 
     public CardBattle(int hp, int attackDamage, int defense, List<CardItem> subCards)
