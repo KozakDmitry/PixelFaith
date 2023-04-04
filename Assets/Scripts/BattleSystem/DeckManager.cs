@@ -18,6 +18,10 @@ public class DeckManager : MonoBehaviour,IBattle
     public void StartBattle()
     {
         cardList = inventory.GetNeededObjects(type.Card);
+        
+    }
+    private void BuildADeck()
+    {
 
     }
     public void EndBattle()
