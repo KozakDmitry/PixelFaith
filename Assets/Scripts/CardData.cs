@@ -8,20 +8,18 @@ public class CardData : ScriptableObject
 {
 
     [SerializeField]
-    private int hp;
+    private CardBattle cardBattle;
     [SerializeField]
-    private int attackDamage;
-    [SerializeField]
-    private int defense;
-    [SerializeField]
-    private List<CardItem> subCards;
+    private List<CardDeck> subCards;
     [SerializeField]
     private typeOfCard type;
     [SerializeField]
     private Sprite icon;
-    //[SerializeField]
-    //private CardItem[] cards;
 
+    public List<CardDeck> getSubCards()
+    {
+        return subCards;
+    }
     public typeOfCard Type
     {
         get
@@ -37,12 +35,6 @@ public class CardData : ScriptableObject
         }
     }
 
-    //public CardItem[] Cards
-    //{
-    //    get
-    //    {
-    //        return cards;
-    //    }
-    //}
+
 
 }

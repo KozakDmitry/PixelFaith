@@ -52,6 +52,11 @@ public class InventoryCell
      
         
     }
+    public CardData GetCardData()
+    {
+        return cardData;
+    }
+
 
     public void ChangeImage(Sprite image) 
     {
