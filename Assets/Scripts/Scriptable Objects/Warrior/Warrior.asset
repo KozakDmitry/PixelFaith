@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982def54280c59142b5eda0467f2f7fd, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: 
-  hp: 20
-  attackDamage: 10
-  defense: 5
   subCards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - name: Attack
+    attack: 7
+    cost: 2
+  - name: AttackStrong
+    attack: 10
+    cost: 5
+  - name: AttackWeak
+    attack: 3
+    cost: 1
+  - name: AttackFast
+    attack: 6
+    cost: 6
   type: 0
   icon: {fileID: 21300000, guid: f0ac3c1527fbcb94eba7139ee8b04828, type: 3}
