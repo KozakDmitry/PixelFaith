@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : MonoBehaviour,IBattle
 {
+
+  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +18,15 @@ public class BattleManager : MonoBehaviour
     {
         
     }
+
+
+    public void StartBattle()
+    {
+
+    }
+    public void EndBattle()
+    {
+
+    }
+
 }
