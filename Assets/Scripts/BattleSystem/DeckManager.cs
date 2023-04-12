@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour,IBattle
 {
+
+    [SerializeField]
+    private GameObject cardPlacer;
+    private GameObject[] cardsInHand;
     [SerializeField]
     private Inventory inventory;
     private CardDeck[] deck;
@@ -12,13 +16,27 @@ public class DeckManager : MonoBehaviour,IBattle
     private void Start()
     {
         cardList = new List<InventoryCell>();
-        
+        cardsInHand = new GameObject[5];
     }
     
     public void StartBattle()
     {
         cardList = inventory.GetNeededObjects(type.Card);
         BuildADeck();
+        FillHand();
+    }
+
+    private void FillHand()
+    {
+        for(int i = 0;i< cardsInHand.Length;i++)
+        {
+            cardsInHand[i] = SetCard(deck[i]);
+        }
+    }
+
+    private GameObject SetCard(CardDeck card)
+    {
+        return null;
     }
     private void BuildADeck()
     {

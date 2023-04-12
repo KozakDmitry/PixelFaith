@@ -743,6 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb8e49131a09ea4a9439e8a5d0a8d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPlacer: {fileID: 6808506405658100799}
   inventory: {fileID: 3647348507120884506}
 --- !u!4 &1313599178
 Transform:
@@ -1669,3 +1670,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd23dc08bbeaa641b240cf250d72b8e, type: 3}
+--- !u!1 &6808506405658100799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6808506406220349870, guid: efd23dc08bbeaa641b240cf250d72b8e, type: 3}
+  m_PrefabInstance: {fileID: 6808506405658100798}
+  m_PrefabAsset: {fileID: 0}
