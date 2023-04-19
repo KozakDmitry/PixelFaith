@@ -6,6 +6,7 @@ using UnityEngine;
 [Serializable]
 public class CardDeck 
 {
+    
     [SerializeField]
     private string name;
     [SerializeField]
