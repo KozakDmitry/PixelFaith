@@ -7,7 +7,8 @@ public class DeckManager : MonoBehaviour,IBattle
 
     [SerializeField]
     private GameObject cardPlacer;
-    private GameObject[] cardsInHand;
+    [SerializeField]
+    private CardHolder[] cardsInHand;
     [SerializeField]
     private Inventory inventory;
     private CardDeck[] deck;
@@ -16,7 +17,6 @@ public class DeckManager : MonoBehaviour,IBattle
     private void Start()
     {
         cardList = new List<InventoryCell>();
-        cardsInHand = new GameObject[5];
     }
     
     public void StartBattle()
@@ -34,7 +34,7 @@ public class DeckManager : MonoBehaviour,IBattle
         }
     }
 
-    private GameObject SetCard(CardDeck card)
+    private CardHolder SetCard(CardDeck card)
     {
         return null;
     }

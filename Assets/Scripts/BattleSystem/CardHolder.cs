@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardHolder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private TextMeshProUGUI attack, hp, cost,description, nameCard;
+    [SerializeField]
+    private Image cardImage;
+    
+    public void SetAttack(TextMeshProUGUI attack)
     {
-        
+        this.attack = attack;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetHp(TextMeshProUGUI hp) 
     {
-        
+        this.hp = hp;
+    }
+    public void SetCost(TextMeshProUGUI cost) 
+    {
+        this.cost = cost;
+    }
+    public void SetDescription(TextMeshProUGUI description) 
+    {
+        this.description = description;
+    }
+    public void SetNameCard(TextMeshProUGUI nameCard)
+    {
+        this.nameCard = nameCard;
+    }
+    public void SetCardImage(Image cardImage) 
+    {
+        this.cardImage = cardImage;
     }
 }
