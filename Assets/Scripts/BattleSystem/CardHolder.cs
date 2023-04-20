@@ -10,7 +10,18 @@ public class CardHolder : MonoBehaviour
     private TextMeshProUGUI attack, hp, cost,description, nameCard;
     [SerializeField]
     private Image cardImage;
-    
+    private int attackInt, hpInt, costInt;
+    private string descStr, nameCardStr;
+    public CardHolder(TextMeshProUGUI attack, TextMeshProUGUI hp, TextMeshProUGUI cost, TextMeshProUGUI description, TextMeshProUGUI nameCard, Image cardImage)
+    {
+        this.attack = attack;
+        this.hp = hp;
+        this.cost = cost;
+        this.description = description;
+        this.nameCard = nameCard;
+        this.cardImage = cardImage;
+    }
+
     public void SetAttack(TextMeshProUGUI attack)
     {
         this.attack = attack;
