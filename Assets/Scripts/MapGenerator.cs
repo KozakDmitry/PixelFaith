@@ -89,11 +89,7 @@ public class MapGenerator : MonoBehaviour
 
         if (neighbours.Count == 0)
         {
-            if(position==new Vector2Int(5, 5))
-            {
-                Debug.Log("obosralsya");
-            }
-            return false;
+         
         }
         Vector2Int selectedDirections = neighbours[Random.Range(0, neighbours.Count)];
         RoomManager selectedRoom = mapOfRooms[position.x + selectedDirections.x, position.y + selectedDirections.y];
